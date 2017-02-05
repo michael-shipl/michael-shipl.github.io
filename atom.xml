@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://michael-shipl.github.io/atom.xml" rel="self"/>
+  <link href="http://michael-shipl.github.io/"/>
+  <updated>2017-02-05T22:43:38+08:00</updated>
+  <id>http://michael-shipl.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Intro to Octopress]]></title>
+    <link href="http://michael-shipl.github.io/blog/2017/02/05/hello/"/>
+    <updated>2017-02-05T22:13:40+08:00</updated>
+    <id>http://michael-shipl.github.io/blog/2017/02/05/hello</id>
+    <content type="html"><![CDATA[<h1>第一次尝试</h1>
+
+<h2>First try</h2>
+]]></content>
+  </entry>
+  
+</feed>
