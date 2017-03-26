@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://michael-shipl.github.io/atom.xml" rel="self"/>
   <link href="http://michael-shipl.github.io/"/>
-  <updated>2017-03-26T22:50:40+08:00</updated>
+  <updated>2017-03-26T23:21:29+08:00</updated>
   <id>http://michael-shipl.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[从Amazon的DevOps到AWS的崛起]]></title>
+    <link href="http://michael-shipl.github.io/blog/2017/03/26/cong-amazonde-devopsdao-awsde-jue-qi/"/>
+    <updated>2017-03-26T23:19:19+08:00</updated>
+    <id>http://michael-shipl.github.io/blog/2017/03/26/cong-amazonde-devopsdao-awsde-jue-qi</id>
+    <content type="html"><![CDATA[<p>Amazon是一个集合了各种矛盾的地方。它连续十多年亏损，市值却节节高攀。内部开会不用slides而是写paper。员工一面抱怨者公司很mean，一面也承认学到了很多，尤其是Amazon的Leadership Principles更是影响了众多国内外的明星公司。也许唯一不矛盾的地方是都认为Jeff Bezos是个不错的Visionary.</p>
+
+<h1>Amazon核聚变</h1>
+
+<p>Amazon的技术既普通又神秘，普通是因为Amazon从一个卖书的起家，从来没造过什么黑科技，每一项技术运用的都非常接地气而显得有点屌丝。神秘是因为Amazon也从来不乐于分享自己的技术（内部有大量的讲座，培训，但从来没有对外的Engieering Blog之类的东西），却又可以建造出AWS这样技术的帝国。</p>
+
+<p>Amazon在工程上做的最牛的一件事，在2002年的一声炸雷中，Bezos下令：</p>
+
+<p>所有小组必须开放程序功能模块与数据并提供接口</p>
+
+<p>所有小组的模块通讯必须通过这些接口</p>
+
+<p>所有模块间不能有其它通讯形势</p>
+
+<p>所有模块的设计需考虑到将来可以把接口开放给全世界</p>
+
+<p>不这么做的人就滚蛋</p>
+
+<p>这就是著名的SOA(Service Oriented Architecture)，放在国内现在无论是上市公司还是创业公司，能得其精髓的也相当少，在十几年前，Bezos就敢如此大规模的应用，脑洞和胆识也不是一般的大。</p>
+
+<p>又或者说那时候就考虑到了AWS形态，以至于要求之一是考虑到把接口开放给全世界。</p>
+
+<h1>DevOps形成</h1>
+
+<p>在Amazon之前，没有公司如此大规模的应用过SOA，所以任何其它公司的经验，咨询公司都无能为力。在大型SOA的道路上，Amazon也学得了大量构建大型服务的经验。也因为SOA对工程师所需能力的客观性，形成了DevOps文化。</p>
+
+<p>SOA有个比较严重的问题：服务之间互相连接，系统出错的时候往往要一个ticket在几个组之间来回传几十次才能找到真正的原因。另外如果上游服务出错会严重影响到下游服务的功能和性能。“由于SOA中遇到的问题，必须靠devs统一考虑解决而不是靠ops打辅助，便有了devops的角色。所以DevOps更适合开拓新领域，尤其是跨几层网络模型的新领域。”（来自Amazon Xia Jie的补充）</p>
+
+<p>为了解决这些问题，撇开臭名昭著的Oncall外，Amazon制造了大量的internal tools，帮助对代码和服务进行监控和管理，每个组可以负责好属于自己的服务，以最快速度解决问题，当然也因此经常有员工抱怨在Amazon杂事缠身。相比微软，Google等公司，Amazon真正做到了最大程度的压榨员工剩余价值（Jeff不愧是科班出身的华尔街资本家）。</p>
+
+<p>这些internal tools同时也大大提高了员工工作效率，可以让产品以最快的速度更新迭代，一个工程师便可以完成编写代码，测试代码，版本管理，部署上线，服务监测等任务。所以一个工程师即是develoepr，也是QA，也是deployer。</p>
+
+<p>Facebook，Airbnb的创始人，甚至到国内美团的王兴，都说过从Amazon文化上学到了很多，但也许Jeff对意识形态的输出并不感兴趣，Amazon从来没有对外宣传自己信奉的一些理念。现在看来这样在对开发者的号召力上失去一些优势，我认为这也许是将来阻碍Amazon发展的一小块绊脚石。</p>
+
+<p>无论如何，DevOps从那时起便成为了Amazon的文化之一。</p>
+
+<h1>AWS的崛起</h1>
+
+<p>目前国内很多大型的互联网公司内，internal tools还各自为政，经常有不同部门重复造轮子。而在美国的互联网公司，统一internal tools早已经是基本常识。Amazon是最积极，最重视，也是最早这么做的公司之一。而在统一了工具后，就会促使工程师们开始想，要么可以把其产品化，提供给其他的公司，要么可以把框架开源，提供给开发者。</p>
+
+<p>Amazon选择了产品化，于是AWS诞生了。从最初的S3和EC2服务开始，到目前比较典型的虚拟化容器，数据库，数据仓储，代码管理，自动部署，持续发布，服务监测，服务配置，自动化运维，身份管理，消息队列。通通来自Amazon的内部工具，在我离开之前，还知道若干个正在产品化的内部工具。AWS也不再局限于产品化内部工具，同时也积极融合最新的开源技术，把他们加到AWS的阵容中。</p>
+
+<p>而这样做的好处是，相比Google和Facebook不停尝试和关停各种各样的项目，AWS的服务几乎没有失败，因为这些工具内部已经被使用过若干年无数次，需求早以非常明确，工具也被打磨的比较完善了。这样一个个几乎不败的服务和产品，使得AWS崛起异常迅猛，即便是微软和Google快速反应过来开始做Azure和Google Cloud，由于缺乏内部成因，最终被越甩越远。</p>
+
+<p>相比其他公司AWS到底有多领先？我曾参加的Amazon内部Conference的时候讲到以技术著称的Google在AWS推出S3后也推出了类似的服务，当时Speaker调侃到，Google的存储服务的内部API文档适用于S3但却不适用于他们自己的服务，这是为什么呢？: )</p>
+
+<p>截止2015年，AWS的年营收增长达到了81%，营收额为71亿美元，而增长排名第二的企业服务公司是Salesforce，增长为24%。AWS作为Amazon的一个部门，如果拿出来单独上市，其市值的估计为1000亿美元以上，远超Salesforce，SAP等企业服务公司。接近Oracle，IBM等曾经最大巨头的市值。用户数上，AWS稳居第一，其数量是第二名到第三十名的总和的两倍。近期也看到新闻说Google承认在云服务方面已落后于AWS，希望从自动化方面反超等新闻。不可否认，AWS的崛起并稳占第一，DevOps是因子之一。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First Intro to Octopress]]></title>
